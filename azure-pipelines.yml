@@ -20,7 +20,7 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'sftp://forio.com:9042/'
+    serverUrl: 'sftp://forio.com:9042/va/va-psd-dev'
     username: 'hirenp@waferwire.com'
     password: 'test123A'
     rootDirectory: 'App'

@@ -20,12 +20,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'sftp://forio.com:9042'
+    serverUrl: 'sftp://forio.com:9042/'
     username: 'hirenp@waferwire.com'
     password: 'test123A'
-    rootDirectory: 'test.html'
+    rootDirectory: 'model'
     filePatterns: '**'
-    remoteDirectory: '/va/va-psd-dev/static'
+    remoteDirectory: 'va/va-psd-dev/static'
     clean: false
     cleanContents: false
     preservePaths: false

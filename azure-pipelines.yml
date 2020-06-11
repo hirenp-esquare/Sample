@@ -23,7 +23,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'test.html'
+    sourceFolder: 'info'
     contents: '**'
     targetFolder: 'va/va-psd-dev/static'
     readyTimeout: '20000'

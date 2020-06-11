@@ -17,6 +17,19 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: 'sftp://forio.com:9042/va/va-psd-dev'
+    username: 'hirenp@waferwire.com'
+    password: 'test123A'
+    rootDirectory: 'test.html'
+    filePatterns: '**'
+    remoteDirectory: '/upload/$(Build.BuildId)/static'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
 
 - task: CmdLine@2
   inputs:

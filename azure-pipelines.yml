@@ -25,7 +25,7 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'App'
     contents: '**'
-    targetFolder: '/va/va-psd-dev'
+    targetFolder: '/va-psd-dev'
     readyTimeout: '20000'
 
 - task: CmdLine@2

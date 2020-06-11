@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: CmdLine@2
   inputs:
-    script: 'demo\vensim demo\Model\test.cmd'
+    script: 'type nul > filename.txt'
 - task: CmdLine@2
   inputs:
     script: 'app/test.bat'

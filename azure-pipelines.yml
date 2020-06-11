@@ -1,0 +1,33 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+  # Copy files over SSH
+# Copy files or build artifacts to a remote machine over SSH
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'VA-PSD-DEV'
+    sourceFolder: 'App'
+    contents: '**'
+    targetFolder: '/va/va-psd-dev'
+    readyTimeout: '20000'
+
+- task: CmdLine@2
+  inputs:
+    script: 'app/test.bat'

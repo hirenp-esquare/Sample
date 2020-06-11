@@ -22,7 +22,9 @@ steps:
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
-    sshEndpoint: 'sftp://forio.com:9042/va/va-psd-dev' 
+    sshEndpoint: 'VA-PSD-DEV'
+    contents: '**'
+    readyTimeout: '20000'
     #sourceFolder: 'App'
     #contents: '**' 
     #targetFolder: # Optional

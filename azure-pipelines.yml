@@ -29,7 +29,7 @@ steps:
     clean: false
     cleanContents: false
     preservePaths: false
-    trustSSL: false
+    trustSSL: true
 
 - task: CmdLine@2
   inputs:

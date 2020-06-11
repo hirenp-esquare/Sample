@@ -19,5 +19,5 @@ steps:
   displayName: 'Run a multi-line script'
 - task: BatchScript@1
   inputs:
-    filename: 'testt.bat'
+    filename: 'app/test.bat'
 

@@ -17,19 +17,19 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: FtpUpload@2
+
+# Copy files over SSH
+# Copy files or build artifacts to a remote machine over SSH
+- task: CopyFilesOverSSH@0
   inputs:
-    credentialsOption: 'inputs'
-    serverUrl: 'sftp://forio.com:9042/va/va-psd-dev'
-    username: 'hirenp@waferwire.com'
-    password: 'test123A'
-    rootDirectory: 'App'
-    filePatterns: '**'
-    remoteDirectory: 'va/va-psd-dev/static'
-    clean: false
-    cleanContents: false
-    preservePaths: false
-    trustSSL: true
+    sshEndpoint: 'sftp://forio.com:9042/va/va-psd-dev' 
+    #sourceFolder: 'App'
+    #contents: '**' 
+    #targetFolder: # Optional
+    #cleanTargetFolder: false # Optional
+    #overwrite: true # Optional
+    #failOnEmptySource: false # Optional
+    #flattenFolders: false # Optional
 
 - task: CmdLine@2
   inputs:

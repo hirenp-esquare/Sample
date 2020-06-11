@@ -23,7 +23,7 @@ steps:
     serverUrl: 'sftp://forio.com:9042/'
     username: 'hirenp@waferwire.com'
     password: 'test123A'
-    rootDirectory: 'model'
+    rootDirectory: 'App'
     filePatterns: '**'
     remoteDirectory: 'va/va-psd-dev/static'
     clean: false

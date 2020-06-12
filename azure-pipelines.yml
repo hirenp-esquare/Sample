@@ -25,7 +25,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'icacls demo\Model'
+    script: 'icacls demo/Model/agg_v15_2019_06_14.mdl'
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH

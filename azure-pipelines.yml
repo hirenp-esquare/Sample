@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
@@ -18,22 +18,24 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+# Command line
+# Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 - task: CmdLine@2
   inputs:
-    script: 'demo\vensim demo\Model\test.cmd'
+    script: 'ls -al' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'demo/Model'
+    sourceFolder: 'Info'
     contents: '**/*.vmf'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
 
   
-- task: CmdLine@2
-  inputs:
-    script: 'app/test.bat'
+
 

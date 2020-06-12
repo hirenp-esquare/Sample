@@ -22,9 +22,12 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 - task: CmdLine@2
   inputs:
-    script: 'ls -al' 
+    script: 'chmod 777 /Info/test.html' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
+- task: CmdLine@2
+  inputs:
+    script: 'ls -al' 
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH

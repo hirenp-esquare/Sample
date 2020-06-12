@@ -40,6 +40,13 @@ steps:
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
+- task: CmdLine@2
+  inputs:
+    script: 'sudo chmod 777 file1.txt' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+
 
 - task: CmdLine@2
   inputs:

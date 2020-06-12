@@ -29,7 +29,7 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'demo\Model'
     contents: '**'
-    targetFolder: '\va\va-psd-dev\model'
+    targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
 
 - task: CmdLine@2

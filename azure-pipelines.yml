@@ -20,17 +20,7 @@ steps:
 
 # Command line
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
-- task: CmdLine@2
-  inputs:
-    script: 'sudo chmod 777 Info' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
 
-- task: CmdLine@2
-  inputs:
-    script: 'sudo chmod 777 Info/test.html' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
 - task: CmdLine@2
   inputs:
     script: 'ls -al' 

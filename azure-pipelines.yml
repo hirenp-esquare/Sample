@@ -36,13 +36,28 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'echo "Some line" > file1.txt' 
+    script: 'sudo mkdir dell' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+
+- task: CmdLine@2
+  inputs:
+    script: 'sudo chmod 777 dell' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo chmod 777 file1.txt' 
+    script: 'echo "Some line" > dell/file1.txt' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+
+
+- task: CmdLine@2
+  inputs:
+    script: 'sudo chmod 777 dell/file1.txt' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
@@ -58,7 +73,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'file1.txt'
+    sourceFolder: 'dell'
     contents: '**'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'

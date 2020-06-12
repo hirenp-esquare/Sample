@@ -8,6 +8,6 @@ echo AGENT_BUILDDIRECTORY contents:
 echo BUILD_SOURCESDIRECTORY contents:
 @dir %BUILD_SOURCESDIRECTORY%
 echo Build.BuildId contents:
-echo ID is  %Build.BuildId%
+echo ID is  %BuildId%
 @dir %Build%
 echo Over and out.

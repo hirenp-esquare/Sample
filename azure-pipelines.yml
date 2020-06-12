@@ -20,14 +20,14 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'type nul > filename.txt'
+    script: 'demo\vensim demo\Model\test.cmd'
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'filename.txt'
+    sourceFolder: 'demo/Model'
     contents: '**'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'

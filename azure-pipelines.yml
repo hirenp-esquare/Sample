@@ -22,18 +22,13 @@ steps:
   inputs:
     script: 'demo\vensim demo\Model\test.cmd'
 
-
-- task: CmdLine@2
-  inputs:
-    script: 'icacls "demo/Model/agg_v15_2019_06_14.mdl" /e /p "BUILTIN\Users":f'
-
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'demo/Model'
-    contents: '**'
+    contents: '**/*.vmf'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
 

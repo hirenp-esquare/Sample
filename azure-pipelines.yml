@@ -32,7 +32,7 @@ steps:
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'Info'
-    contents: '**/*.vmf'
+    contents: '**'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
 

@@ -23,6 +23,24 @@ steps:
 
 - task: CmdLine@2
   inputs:
+    script: 'sudo chmod 777 Info' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+- task: CmdLine@2
+  inputs:
+    script: 'sudo chmod 777 /Info/test.html' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+- task: CmdLine@2
+  inputs:
+    script: 'sudo chmod 777 Info/test1.html' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+- task: CmdLine@2
+  inputs:
     script: 'ls -al' 
 
 # Copy files over SSH

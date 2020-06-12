@@ -55,9 +55,7 @@ steps:
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
-- task: CmdLine@2
-  inputs:
-    script: 'App/test.bat'
+
 
 - task: CmdLine@2
   inputs:

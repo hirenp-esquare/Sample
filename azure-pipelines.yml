@@ -43,10 +43,8 @@ steps:
     sourceFolder: 'Info'
     contents: '**'
     targetFolder: '/va/va-psd-dev/model'
-    isWindowsOnTarget: true
     readyTimeout: '20000'
-    failOnEmptySource: true
-    flattenFolders: true
+    
 
   
 

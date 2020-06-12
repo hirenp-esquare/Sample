@@ -18,12 +18,16 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-  # Copy files over SSH
+- task: CmdLine@2
+  inputs:
+    script: 'type nul > filename.txt'
+
+# Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'Info'
+    sourceFolder: 'filename.txt'
     contents: '**'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'

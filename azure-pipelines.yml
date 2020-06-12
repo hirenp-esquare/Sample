@@ -18,14 +18,14 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-
-- task: CmdLine@2
-  inputs:
-    script: 'app/test.bat'
-
 - task: CmdLine@2
   inputs:
     script: 'demo\vensim demo\Model\test.cmd'
+
+
+- task: CmdLine@2
+  inputs:
+    script: 'icacls demo\Model'
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH

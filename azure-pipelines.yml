@@ -27,9 +27,9 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'demo/Model'
+    sourceFolder: 'demo\Model'
     contents: '**'
-    targetFolder: '/va/va-psd-dev/model'
+    targetFolder: '\va\va-psd-dev\model'
     readyTimeout: '20000'
 
 - task: CmdLine@2

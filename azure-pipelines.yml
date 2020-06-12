@@ -36,6 +36,13 @@ steps:
 
 - task: CmdLine@2
   inputs:
+    script: 'echo "Some line" > file1.txt' 
+    #workingDirectory: # Optional
+    #failOnStderr: false # Optional
+
+
+- task: CmdLine@2
+  inputs:
     script: 'ls -al' 
 
     

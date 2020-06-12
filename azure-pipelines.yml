@@ -22,7 +22,7 @@ steps:
 # Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 - task: CmdLine@2
   inputs:
-    script: 'chmod 777 /Info/test.html' 
+    script: 'chmod 777 Info/test.html' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 - task: CmdLine@2

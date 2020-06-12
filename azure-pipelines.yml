@@ -50,7 +50,18 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'ls -al' 
+    script: 'ls -al'
+
+
+# Copy files over SSH
+# Copy files or build artifacts to a remote machine over SSH
+- task: CopyFilesOverSSH@0
+  inputs:
+    sshEndpoint: 'VA-PSD-DEV'
+    sourceFolder: 'file1.txt'
+    contents: '**'
+    targetFolder: '/va/va-psd-dev/model'
+    readyTimeout: '20000'
 
     
 

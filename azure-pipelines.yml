@@ -29,7 +29,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo chmod 777 /Info/test.html' 
+    script: 'sudo chmod 777 Info/test.html' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 

@@ -18,6 +18,11 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
+
+- task: CmdLine@2
+  inputs:
+    script: 'app/test.bat'
+
 - task: CmdLine@2
   inputs:
     script: 'demo\vensim demo\Model\test.cmd'
@@ -32,6 +37,8 @@ steps:
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
 
+  
 - task: CmdLine@2
   inputs:
     script: 'app/test.bat'
+

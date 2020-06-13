@@ -70,7 +70,7 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'books'
     contents: '**'
-    targetFolder: '/va/va-psd-dev/model/dell/fileone.txt'
+    targetFolder: '/va/va-psd-dev/model/books/'
     readyTimeout: '20000'
     failOnEmptySource: true
     flattenFolders: true

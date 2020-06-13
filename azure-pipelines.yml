@@ -35,7 +35,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'mkdir dell && touch dell/file1.txt' 
+    script: 'mkdir dell && touch "Some line" > dell/file1.txt' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 

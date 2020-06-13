@@ -70,8 +70,8 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'books'
     contents: '**'
-    targetFolder: '/vag/va-psdf-dev/model/books/'
-    readyTimeout: '1'
+    targetFolder: '/vag/va-psdf-dev/static/books/'
+    readyTimeout: '20000'
     failOnEmptySource: true
     flattenFolders: true
 

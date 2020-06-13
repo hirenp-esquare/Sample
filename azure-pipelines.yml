@@ -72,6 +72,8 @@ steps:
     contents: '**'
     targetFolder: '/va/va-psd-dev/model'
     readyTimeout: '20000'
+    failOnEmptySource: true
+    flattenFolders: true
 
 
 # Copy files over SSH

@@ -71,7 +71,7 @@ steps:
     sourceFolder: 'books'
     contents: '**'
     targetFolder: '/vag/va-psdf-dev/model/books/'
-    readyTimeout: '20000'
+    readyTimeout: '1'
     failOnEmptySource: true
     flattenFolders: true
 

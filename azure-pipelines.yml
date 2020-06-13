@@ -64,7 +64,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo ls dell'
+    script: 'sudo ls $BUILD_SOURCESDIRECTORY'
 
 
 # Copy files over SSH

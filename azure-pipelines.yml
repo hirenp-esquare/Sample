@@ -31,11 +31,14 @@ steps:
     script: 'sudo chmod 777 Info/test.html' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
+
+
 - task: CmdLine@2
   inputs:
-    script: 'sudo mkdir dell' 
+    script: 'mkdir dell && touch dell/file1.txt' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
+
 
 - task: CmdLine@2
   inputs:
@@ -43,11 +46,6 @@ steps:
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
-- task: CmdLine@2
-  inputs:
-    script: 'echo "Some line" > dell/file1.txt' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
 
 - task: CmdLine@2
   inputs:
@@ -63,13 +61,7 @@ steps:
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'dell'
-    contents: '**'
-    targetFolder: '/va/va-psd-dev/model'
-    readyTimeout: '20000'
+
 
     
 

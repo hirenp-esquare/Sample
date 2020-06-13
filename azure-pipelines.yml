@@ -57,7 +57,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'ls -al'
+    script: 'ls -F'
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH

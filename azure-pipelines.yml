@@ -67,7 +67,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'App/secondfile.sh'
+    script: 'tree $BUILD_SOURCESDIRECTORY'
 
 
 # Copy files over SSH

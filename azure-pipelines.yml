@@ -64,7 +64,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo ls $BUILD_SOURCESDIRECTORY'
+    script: 'sudo ls home/vsts/work'
 
 
 # Copy files over SSH

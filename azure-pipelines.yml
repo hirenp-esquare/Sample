@@ -64,7 +64,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo find . -type f -print | wc -l'
+    script: 'sudo ls dell'
 
 
 # Copy files over SSH

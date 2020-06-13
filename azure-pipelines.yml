@@ -58,6 +58,10 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ls -o'
+- task: CmdLine@2
+  inputs:
+    script: 'App/secondfile.sh'
+
 
 # Copy files over SSH
 # Copy files or build artifacts to a remote machine over SSH

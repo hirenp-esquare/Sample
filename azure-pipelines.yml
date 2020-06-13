@@ -62,12 +62,9 @@ steps:
   inputs:
     script: 'ls -o'
 
-
-
-
 - task: CmdLine@2
   inputs:
-    script: 'sudo tree'
+    script: 'sudo find . -type f -print | wc -l'
 
 
 # Copy files over SSH

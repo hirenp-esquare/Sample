@@ -67,7 +67,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'tree $BUILD_SOURCESDIRECTORY'
+    script: 'sudo tree'
 
 
 # Copy files over SSH

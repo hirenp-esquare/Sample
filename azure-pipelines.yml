@@ -64,7 +64,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'sudo ls -al books'
+    script: 'sudo ls -al $BUILD_SOURCESDIRECTORY && ls -al books'
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'VA-PSD-DEV'

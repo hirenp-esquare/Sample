@@ -53,11 +53,18 @@ steps:
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
+- task: CmdLine@2
+  inputs:
+    script: 'chmod +x App/secondfile.sh'
 
 
 - task: CmdLine@2
   inputs:
     script: 'ls -o'
+
+
+
+
 - task: CmdLine@2
   inputs:
     script: 'App/secondfile.sh'

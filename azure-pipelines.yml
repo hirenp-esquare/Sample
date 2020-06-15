@@ -30,7 +30,7 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: 'test/'
+    remoteDirectory: 'test11/'
     clean: false
     cleanContents: false
     preservePaths: false

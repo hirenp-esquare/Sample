@@ -30,12 +30,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftp://104.215.23.24'
-    username: 'test'
-    password: 'test'
+    serverUrl: 'ftp://waws-prod-bay-019.ftp.azurewebsites.windows.net'
+    username: 'tcmergedev\$tcmergedev'
+    password: $(tempc)
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remotePath: '/'
+    remoteDirectory: '/site/wwwroot/test/'
     clean: false
     cleanContents: false
     preservePaths: false

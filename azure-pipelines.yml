@@ -35,8 +35,8 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: '/Test'
-    enableUtf8: true
+    remoteDirectory: 'test'
+    enableUtf8: false
     clean: false
     cleanContents: false
     preservePaths: false

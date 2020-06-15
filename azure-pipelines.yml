@@ -36,7 +36,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'mkdir books && > books/fileone.txt' 
+    script: 'mkdir books && echo "Some line" > books/fileone.txt' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 
@@ -77,7 +77,7 @@ steps:
     password: 'test'
     rootDirectory: 'books'
     filePatterns: '**'
-    remoteDirectory: '/test/'
+    remoteDirectory: '/test'
     clean: false
     cleanContents: false
     preservePaths: false

@@ -71,8 +71,8 @@ steps:
   inputs:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'books'
-    contents: 'books/fileone.txt'
-    targetFolder: '/va/va-psd-dev/static/books/'
+    contents: '/books/fileone.txt'
+    targetFolder: '~/va/va-psd-dev/static/books/'
     readyTimeout: '20000'
     failOnEmptySource: true
     flattenFolders: true

@@ -73,8 +73,8 @@ steps:
   inputs:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://104.215.23.24'
-    username: 'TesterVM2\dev2'
-    password: 'Share@123'
+    username: 'test'
+    password: 'test'
     rootDirectory: 'books'
     filePatterns: '**'
     remoteDirectory: '/test/'

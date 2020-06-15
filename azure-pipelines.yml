@@ -36,6 +36,7 @@ steps:
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
     remoteDirectory: '/Test'
+    enableUtf8: true
     clean: false
     cleanContents: false
     preservePaths: false

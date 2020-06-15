@@ -22,6 +22,11 @@ steps:
   inputs:
     script: 'demo\vensim demo\Model\test.cmd'
 
+
+- task: CmdLine@2
+  inputs:
+    script: 'app/test.bat'
+
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
@@ -30,13 +35,10 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: '/'
+    remoteDirectory: '/Test'
     clean: false
     cleanContents: false
     preservePaths: false
     trustSSL: false
 
   
-- task: CmdLine@2
-  inputs:
-    script: 'app/test.bat'

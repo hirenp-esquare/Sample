@@ -25,12 +25,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftp://104.215.23.24'
+    serverUrl: 'ftp://104.215.23.24/'
     username: 'test'
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: '/test'
+    remoteDirectory: 'test/'
     clean: false
     cleanContents: false
     preservePaths: false

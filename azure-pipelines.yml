@@ -66,6 +66,19 @@ steps:
   inputs:
     script: 'sudo ls -al $BUILD_SOURCESDIRECTORY && ls -al books'
 
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: 'ftp://104.215.23.24/'
+    username: 'TesterVM2\dev2'
+    password: $(temppassword)
+    rootDirectory: 'book'
+    filePatterns: '**'
+    remoteDirectory: '/test/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: false
 
 - task: CopyFilesOverSSH@0
   inputs:

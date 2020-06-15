@@ -73,7 +73,7 @@ steps:
     password: '9fxfHz7zHqJixndYne6y0Wt5octugmezhEPz7iBptXeLm9uZMpnnbwhdQAvl'
     rootDirectory: 'books'
     filePatterns: '**'
-    remoteDirectory: 'Test'
+    remoteDirectory: '/Test/'
     clean: false
     cleanContents: false
     preservePaths: false

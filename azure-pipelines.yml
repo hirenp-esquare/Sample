@@ -7,67 +7,20 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello Wordld!
+- script: echo Hello, world!
   displayName: 'Run a one-line script'
-
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-# Command line
-# Run a command line script using Bash on Linux and macOS and cmd.exe on Windows
 - task: CmdLine@2
   inputs:
-    script: 'sudo chmod 777 Info' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-
-- task: CmdLine@2
-  inputs:
-    script: 'sudo chmod 777 Info/test.html' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-
-
-- task: CmdLine@2
-  inputs:
-    script: 'mkdir books && echo "Some line" > books/fileone.txt' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-
-
-- task: CmdLine@2
-  inputs:
-    script: 'sudo chmod 777 books' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-
-
-- task: CmdLine@2
-  inputs:
-    script: 'sudo chmod 777 books/fileone.txt' 
-    #workingDirectory: # Optional
-    #failOnStderr: false # Optional
-
-- task: CmdLine@2
-  inputs:
-    script: 'chmod +x App/secondfile.sh'
-
-
-- task: CmdLine@2
-  inputs:
-    script: 'ls -o'
-
-- task: CmdLine@2
-  inputs:
-    script: 'sudo ls -al $BUILD_SOURCESDIRECTORY && ls -al books'
-
-
+    script: 'demo\vensim demo\Model\test.cmd'
 
 - task: FtpUpload@2
   inputs:
@@ -75,7 +28,7 @@ steps:
     serverUrl: 'ftp://104.215.23.24'
     username: 'test'
     password: 'test'
-    rootDirectory: 'books'
+    rootDirectory: 'demo/Model'
     filePatterns: '**'
     remoteDirectory: '/test'
     clean: false
@@ -83,23 +36,7 @@ steps:
     preservePaths: false
     trustSSL: false
 
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'books'
-    contents: '**'
-    targetFolder: '/va/va-psd-dev/static/books/'
-    readyTimeout: '20000'
-    failOnEmptySource: true
-    flattenFolders: true
-
-
-# Copy files over SSH
-# Copy files or build artifacts to a remote machine over SSH
-
-
-    
-
   
-
-
+- task: CmdLine@2
+  inputs:
+    script: 'app/test.bat'

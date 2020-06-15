@@ -69,7 +69,7 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftp://104.215.23.24/'
+    serverUrl: 'ftp://104.215.23.24'
     username: 'TesterVM2\dev2'
     password: $(temppassword)
     rootDirectory: 'books'

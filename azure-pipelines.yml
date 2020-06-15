@@ -28,9 +28,9 @@ steps:
     serverUrl: 'ftp://104.215.23.24/'
     username: 'test'
     password: 'test'
-    rootDirectory: 'demo/Model'
+    rootDirectory: '/demo/Model/'
     filePatterns: '**'
-    remoteDirectory: ''
+    remoteDirectory: '/test/'
     clean: false
     cleanContents: false
     preservePaths: false

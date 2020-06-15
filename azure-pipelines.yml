@@ -35,7 +35,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'mkdir books && echo > books/fileone.txt' 
+    script: 'mkdir books && > books/fileone.txt' 
     #workingDirectory: # Optional
     #failOnStderr: false # Optional
 

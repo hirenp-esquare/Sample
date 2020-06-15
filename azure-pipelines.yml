@@ -30,6 +30,20 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
+    serverUrl: 'ftps://104.215.23.24:990'
+    username: 'test'
+    password: 'test'
+    rootDirectory: 'demo/Model/'
+    filePatterns: '**'
+    remoteDirectory: '/'
+    clean: false
+    cleanContents: false
+    preservePaths: false
+    trustSSL: true
+
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
     serverUrl: 'ftp://104.215.23.24'
     username: 'test'
     password: 'test'
@@ -41,19 +55,7 @@ steps:
     preservePaths: false
     trustSSL: false
 
-- task: FtpUpload@2
-  inputs:
-    credentialsOption: 'inputs'
-    serverUrl: 'ftps://104.215.23.24:21'
-    username: 'test'
-    password: 'test'
-    rootDirectory: 'demo/Model/'
-    filePatterns: '**'
-    remoteDirectory: '/'
-    clean: false
-    cleanContents: false
-    preservePaths: false
-    trustSSL: true
+
 
 
   

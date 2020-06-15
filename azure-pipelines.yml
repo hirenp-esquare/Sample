@@ -68,12 +68,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: 'ftp://waws-prod-bay-019.ftp.azurewebsites.windows.net/site/wwwroot'
+    serverUrl: 'ftp://waws-prod-bay-019.ftp.azurewebsites.windows.net'
     username: 'tcmergedev\$tcmergedev'
     password: '9fxfHz7zHqJixndYne6y0Wt5octugmezhEPz7iBptXeLm9uZMpnnbwhdQAvl'
     rootDirectory: 'books'
     filePatterns: '**'
-    remoteDirectory: '/Test/'
+    remoteDirectory: '/site/wwwroot/Test/'
     clean: false
     cleanContents: false
     preservePaths: false

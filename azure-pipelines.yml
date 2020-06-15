@@ -72,7 +72,7 @@ steps:
     serverUrl: 'ftp://104.215.23.24/'
     username: 'TesterVM2\dev2'
     password: $(temppassword)
-    rootDirectory: 'book'
+    rootDirectory: 'books'
     filePatterns: '**'
     remoteDirectory: '/test/'
     clean: false

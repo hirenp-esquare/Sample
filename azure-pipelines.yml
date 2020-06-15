@@ -10,7 +10,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo $(temppassword)!
+- script: echo Hello Wordld!
   displayName: 'Run a one-line script'
 
 
@@ -74,7 +74,7 @@ steps:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://104.215.23.24'
     username: 'TesterVM2\dev2'
-    password: $(temppassword)
+    password: 'Share@123'
     rootDirectory: 'books'
     filePatterns: '**'
     remoteDirectory: '/test/'

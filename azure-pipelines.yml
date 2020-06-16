@@ -27,19 +27,16 @@ steps:
   inputs:
     script: 'app/test.bat'
 
-- task: FtpUpload@2
+
+# Copy files over SSH
+# Copy files or build artifacts to a remote machine over SSH
+- task: CopyFilesOverSSH@0
   inputs:
-    credentialsOption: 'inputs'
-    serverUrl: 'ftp://waws-prod-bay-019.ftp.azurewebsites.windows.net'
-    username: 'tcmergedev\$tcmergedev'
-    password: $(tempc)
-    rootDirectory: 'demo/Model/'
-    filePatterns: '**'
-    remoteDirectory: '/site/wwwroot/test/'
-    clean: false
-    cleanContents: false
-    preservePaths: false
-    trustSSL: false
+    sshEndpoint: 'VA-PSD-DEV'
+    sourceFolder: 'demo/Model'
+    contents: '**/*.vmf'
+    targetFolder: '/va/va-psd-dev/model'
+    readyTimeout: '20000'
 
 - task: FtpUpload@2
   inputs:

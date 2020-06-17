@@ -18,9 +18,6 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- task: CmdLine@2
-  inputs:
-    script: 'DeployFiles\deploy Hiren'
 
 - task: CmdLine@2
   inputs:
@@ -29,34 +26,10 @@ steps:
 
 - task: CmdLine@2
   inputs:
+    script: 'DeployFiles\deploy "demo\Model\agg_v15_2019_06_14.vmf"'
+
+
+- task: CmdLine@2
+  inputs:
     script: 'app/test.bat'
 
-
-# Copy files over SSH
-# Copy files or build artifacts to a remote machine over SSH
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'VA-PSD-DEV'
-    sourceFolder: 'demo/Model'
-    contents: '**/*.vmf'
-    targetFolder: 'va/va-psd-dev/model'
-    readyTimeout: '20000'
-
-- task: FtpUpload@2
-  inputs:
-    credentialsOption: 'inputs'
-    serverUrl: 'ftp://104.215.23.24'
-    username: 'test'
-    password: 'test'
-    rootDirectory: 'demo/Model/'
-    filePatterns: '**'
-    remoteDirectory: '/'
-    clean: false
-    cleanContents: false
-    preservePaths: false
-    trustSSL: false
-
-
-
-
-  

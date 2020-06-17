@@ -46,7 +46,7 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: '/'
+    remoteDirectory: '/va'
     clean: false
     cleanContents: false
     preservePaths: false

@@ -46,7 +46,7 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: '/va/va-psd-dev/'
+    remoteDirectory: '/va/va-psd-dev/model/'
     clean: false
     cleanContents: false
     preservePaths: false

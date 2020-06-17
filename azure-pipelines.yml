@@ -20,6 +20,10 @@ steps:
 
 - task: CmdLine@2
   inputs:
+    script: 'DeployFiles\deploy'
+
+- task: CmdLine@2
+  inputs:
     script: 'demo\vensim demo\Model\test.cmd'
 
 

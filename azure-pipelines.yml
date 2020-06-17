@@ -20,7 +20,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'DeployFiles\deploy'
+    script: 'DeployFiles\deploy Hiren'
 
 - task: CmdLine@2
   inputs:

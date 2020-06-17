@@ -35,7 +35,7 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'demo/Model'
     contents: '**/*.vmf'
-    targetFolder: '/va-psd-dev/model'
+    targetFolder: '/'
     readyTimeout: '20000'
 
 - task: FtpUpload@2

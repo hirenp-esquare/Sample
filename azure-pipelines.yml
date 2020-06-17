@@ -35,7 +35,7 @@ steps:
     sshEndpoint: 'VA-PSD-DEV'
     sourceFolder: 'demo/Model'
     contents: '**/*.vmf'
-    targetFolder: '/'
+    targetFolder: '/va'
     readyTimeout: '20000'
 
 - task: FtpUpload@2
@@ -46,7 +46,7 @@ steps:
     password: 'test'
     rootDirectory: 'demo/Model/'
     filePatterns: '**'
-    remoteDirectory: 'va'
+    remoteDirectory: '/'
     clean: false
     cleanContents: false
     preservePaths: false
